@@ -1,0 +1,6 @@
+{
+  "resources": "artworks",
+  "query": {
+    "term" : { "fiscal_year": 2017 }
+  }
+}

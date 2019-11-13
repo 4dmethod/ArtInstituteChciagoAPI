@@ -1,0 +1,23 @@
+{
+  "resources": "artworks",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "date_start": {
+              "gte": 1812
+            }
+          }
+        },
+        {
+          "range": {
+            "date_end": {
+              "lte": 1815
+            }
+          }
+        }
+      ]
+    }
+  }
+}

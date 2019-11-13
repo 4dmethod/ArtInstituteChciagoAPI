@@ -1,0 +1,42 @@
+{
+    "resources": "artworks",
+    "query": {
+        "function_score": {
+            "query": {
+            	"bool": {
+            		"must": [
+            			{
+            				"term": {
+                				"is_public_domain": true
+                			}
+            			},
+            			{
+            				"exists": {
+                				"field": "image_id"
+                			}
+            			},
+            			{
+            				"term" : {
+								"thumbnail.width": 3000
+								
+							}
+            			},
+						{
+							"range": {
+								"thumbnail.height": {
+									"gte": 1575,
+									"lte": 2175
+								}
+							}
+						}
+
+        			]
+            	}
+            },
+            "random_score": {
+            	"field": "id",
+            	"seed": 1573241658
+            }
+        }
+    }
+}

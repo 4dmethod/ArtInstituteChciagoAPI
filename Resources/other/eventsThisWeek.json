@@ -1,0 +1,23 @@
+{
+  "resources": "event-occurrences",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "start_at": {
+              "lte": "now+1w/w"
+            }
+          }
+        },
+        {
+          "range": {
+            "end_at": {
+              "gte": "now/w"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

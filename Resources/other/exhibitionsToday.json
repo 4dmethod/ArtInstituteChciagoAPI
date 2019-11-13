@@ -1,0 +1,28 @@
+{
+  "resources": "exhibitions",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "start_at": {
+              "lte": "now+1d/d"
+            }
+          }
+        },
+        {
+          "range": {
+            "end_at": {
+              "gte": "now/d"
+            }
+          }
+        }
+      ],
+      "must_not": {
+        "term": {
+          "status": "Closed"
+        }
+      }
+    }
+  }
+}

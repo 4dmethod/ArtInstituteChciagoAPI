@@ -1,0 +1,23 @@
+{
+  "resources": "event-occurrences",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "start_at": {
+              "lte": "2020-01-27"
+            }
+          }
+        },
+        {
+          "range": {
+            "end_at": {
+              "gte": "2020-01-26"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

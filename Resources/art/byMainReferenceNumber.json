@@ -1,0 +1,6 @@
+{
+  "resources": "artworks",
+  "query": {
+    "term" : { "main_reference_number" : "1942.51" } 
+  }
+}

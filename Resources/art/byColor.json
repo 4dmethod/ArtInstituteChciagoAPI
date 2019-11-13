@@ -1,0 +1,33 @@
+{
+  "resources": "artworks",
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "color.h": {
+              "gte": 339,
+              "lte": 349
+            }
+          }
+        },
+        {
+          "range": {
+            "color.s": {
+              "gte": 86,
+              "lte": 96
+            }
+          }
+        },
+        {
+          "range": {
+            "color.l": {
+              "gte": 32,
+              "lte": 42
+            }
+          }
+        }
+      ]
+    }
+  }
+}
