@@ -1,4 +1,4 @@
-# ArtInstituteChciagoAPI
+# ArtInstituteChicagoAPI
 
 Demo database for 4DMethod meeting 
 
